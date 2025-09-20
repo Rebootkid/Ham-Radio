@@ -31,4 +31,6 @@ echo MODEM 1200 >> direwolf.conf
 # You'll need qsstv
 # as well as gqrx
 # and pavucontrol will plumb one to the other
-#
+pactl load-module module-null-sink sink_name=virtual-cable
+# then Once this null sink is created open up Pulse Audio Volume Control, GQRX and QSSTV. In the recording tab, set the input for QSSTV to Monitor of Null Output.
+# Finally in the output devices tab, set GQRX to Null Output.
